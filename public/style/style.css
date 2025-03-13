@@ -1,43 +1,54 @@
-.text-body-emphasis {
-    --bs-text-opacity: 1;
-    color: var(--bs-emphasis-color) !important;
+
+
+
+
+@media (min-width: 768px) {
+.p-md-5 {
+        padding: 3rem !important;
+        padding-top: 3rem!important;
+        padding-right: 3rem!important;
+        padding-bottom:3rem!important;
+        padding-left: 3rem !important;
+    }
 }
 
+
+
 .p-4 {
-    padding: 1.5rem !important;
+    padding: 3rem !important;
+    padding-top: 3rem !important;
+    padding-right: 3rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 3rem !important;
 }
 
 .mb-4 {
     margin-bottom: 1.5rem !important;
+    
 }
 
 *, ::after, ::before {
     box-sizing: border-box;
+   
 }
 div {
     display: block;
     unicode-bidi: isolate;
 }
 
-.p-md-5 {
-        padding: 3rem !important;
-    }
+
+
 .rounded {
         border-radius: var(--bs-border-radius) !important;
     }
 
 .bg-body-secondary {
     --bs-bg-opacity: 1;
-    background-color: 
-    #FFF9F3 !important;
+    background-color:  #FFF9F3 !important;
+
     
 }
-.bg-image{
-    background-image: url('/images/7419559.jpg');
-    height: 100vh;
-    background-size:contain;
-    background-repeat: no-repeat;
-}
+
 .px-0 {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -55,13 +66,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: .5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--bs-heading-color);
-}
 
 h1 {
     display: block;
@@ -75,5 +79,32 @@ h1 {
 }
 
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
 
+.fw-bold {
+    font-weight: 700 !important;
+}
+.text-body-emphasis {
+    --bs-text-opacity: 1;
+    color: var(--bs-emphasis-color) !important;
+}
 
+#editor {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.title{
+    font-family: Arial, sans-serif;
+            margin: 20px;
+}
