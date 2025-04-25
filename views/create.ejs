@@ -1,0 +1,19 @@
+
+
+<%- include("partial/head.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New blog</title>
+</head>
+<body>
+    <h1>New Blog</h1>
+    <form action="/submit" method="POST">
+           <input cntenteditable="true" placeholder="Title" name="title" required>
+           <input id="editor" contenteditable="true" placeholder="what is in your mind" name="content" required>
+           <button onclick="submitContent()" href="/submit">submit</button>
+        </form>
+</body>
+</html>

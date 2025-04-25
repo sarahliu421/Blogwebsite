@@ -1,6 +1,6 @@
 import express from"express";
 import bodyParser from "body-parser";
-import mongoose from 'mongoose';
+
 
 
 
@@ -8,33 +8,14 @@ const app = express();
 const port = 3000;
 
 app.use(express.static("public"))
-app.use( bodyParser.json() );  
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let blogPosts=[];
-
-function displayBlogs() {
-  
-$("main").append(
 
 
+let blogs=[];
 
-);
-  
-}
-
-function submitContent() {
-  const content = document.getElementById('editor').innerHTML;
-  blogPosts.push(content); 
-  displayBlogs();
-}
-
-app.get("/submit",(req,res,next)=>{
- res.redirect("/");
- submitContent();
-})
 app.get ("/", (req,res)=>{
-    res.render("index.ejs", { title: null, content:null });
+    res.render("index.ejs",{blogs: blogs.title});
 })
 
 app.get ("/contact", (req,res)=>{
@@ -46,10 +27,19 @@ app.get("/create", (req, res) => {
     res.render("create.ejs");
   });
 
-app.post("/submit",(req,res)=>{
 
+app.post("/submit",(req,res)=>{
+  const title=req.body["title"];
+  const id= title;
+  const content= req.body["content"]
+  blogs.push({id,title, content});
+  res.redirect("/");
 })
 
+app.get("/blog/:id",(req,res)=>{
+  res.render("post.ejs");
+
+})
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

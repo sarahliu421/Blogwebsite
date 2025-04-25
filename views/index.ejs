@@ -39,6 +39,18 @@
       </div>
     
     </main>
+     <!-- below is blog area -->
+     <h1>Blog Home</h1>
+     <% if (locals.titles){ %>
+     <ul>
+      <% blogs.forEach(function(title) { %>
+        <a href="/blog/<%= id %>"><%= blogs.title %></a>
+      <% }); %>
+     
+     </ul>
+     <% } else { %>
+      <h2>Create a new one</h2>
+    <% } %>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
 </body>
