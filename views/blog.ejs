@@ -1,0 +1,12 @@
+
+
+<% if (locals.blog){ %>
+<h1><%= blog.title %></h1>
+<p><%= blog.content %></p>
+<% } else { %>
+    <h2>Create a new one</h2>
+  <% } %>
+
+  <a href="/" style="text-decoration: none;">
+    <button>-Back to Home</button>
+  </a>

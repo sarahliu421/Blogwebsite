@@ -11,9 +11,11 @@
 <body>
     <h1>New Blog</h1>
     <form action="/submit" method="POST">
-           <input cntenteditable="true" placeholder="Title" name="title" required>
-           <input id="editor" contenteditable="true" placeholder="what is in your mind" name="content" required>
-           <button onclick="submitContent()" href="/submit">submit</button>
+           <input type="text" placeholder="Title" name="title" required>
+           <!--<input type="text"  placeholder="what is in your mind" name="content" required>-->
+           <textarea name="content"></textarea>
+           <!--<button onclick="submitContent()" href="/submit">submit</button>-->
+           <input type="submit" value="Submit Form!">
         </form>
 </body>
 </html>

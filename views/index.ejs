@@ -41,10 +41,13 @@
     </main>
      <!-- below is blog area -->
      <h1>Blog Home</h1>
-     <% if (locals.titles){ %>
+     <% if (locals.blogs){ %>
      <ul>
-      <% blogs.forEach(function(title) { %>
-        <a href="/blog/<%= id %>"><%= blogs.title %></a>
+      <% blogs.forEach(function(blog) { %>
+        <li>
+        <a href="/blog/<%= blog.id %>"><%= blog.title %></a>
+      </li>
+      
       <% }); %>
      
      </ul>
