@@ -10,3 +10,14 @@
   <a href="/" style="text-decoration: none;">
     <button>-Back to Home</button>
   </a>
+<form action="/delete/" method="post" onsubmit="return confirmToDelete()"><!--why have to put return-->
+  <button type="submit" >Delete</button> <!--not use input-->
+  <input type="hidden" value="<%= blog.id %>" name="id" >
+  
+  </form>
+
+  <script>
+     function confirmToDelete(){
+      return confirm("Are you sure to delete it")
+     }
+  </script>
